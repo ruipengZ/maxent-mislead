@@ -33,7 +33,7 @@ Our code is based on RL benchmark [tianshou](https://github.com/thu-ml/tianshou/
 ## Environments
 We provide a set of RL environments that are designed to test the effects of maximum entropy objectives on policy learning. The environments include:
 - **Acrobot**(`Acrobot-v0`): is a two-link planar robot arm with one end fixed at the shoulder and the only actuated joint at the elbow. The action is changed to continuous torque values instead of simpler discrete values in OpenAI Gym.
-- **Vehicle**(`DBicycle-v0`): the task is to control a wheeled vehicle under the nonlinear dynamic bicycle model to move at a constant high speed along a path. Effective control is critical for steering the vehicle onto the path.
+- **Vehicle**(`Vehicle-v0`): the task is to control a wheeled vehicle under the nonlinear dynamic bicycle model to move at a constant high speed along a path. Effective control is critical for steering the vehicle onto the path.
 - **Quadrotor**(`QuadRotor-v0`): the task is to control a quadrotor to track a simple path under small perturbations. The actions are the independent speeds of its four rotors, which makes the learning task harder than simpler models. 
 - **Obstacle2D**(`Obstacle2D-v0`): the goal is to navigate an agent to the goal behind a wall, which creates a clear suboptimal local policy that the agent should learn to avoid.
 - **Opencat**(`OpenCat-v0`):  environment simulates an open-source Arduino-based quadruped robot (PetoiCamp). The action space is the 8 joint angles of the robot.
@@ -47,7 +47,7 @@ sh run_experiments.sh
 
 For simplicity, we provide individual python files for each environment and algorithm, but you can also run the python script to train all algorithms on all environments.
 
-1. PPO
+1. **PPO**
 ```
 python run_ppo.py --task TASK --logdir LOG_DIR 
                 --hidden-size HIDDEN_SIZE
@@ -68,7 +68,7 @@ python run_ppo.py --task TASK --logdir LOG_DIR
 - `step-per-epoch` - environment steps per epoch
 
 
-2. SAC
+2. **SAC**
 ```
 python run_sac.py --task TASK --logdir LOG_DIR 
                 --hidden-size HIDDEN_SIZE
@@ -92,7 +92,7 @@ python run_sac.py --task TASK --logdir LOG_DIR
 - `epoch` - total training epochs
 - `step-per-epoch` - environment steps per epoch
 
-3. SAC-auto-alpha
+3. **SAC-auto-alpha**
 ```
 python run_sac.py --algo-name 'SAC_autoalpha' --task TASK --logdir LOG_DIR 
                 --hidden-size HIDDEN_SIZE
@@ -119,7 +119,7 @@ python run_sac.py --algo-name 'SAC_autoalpha' --task TASK --logdir LOG_DIR
 - `step-per-epoch` - environment steps per epoch
 
 
-4. SAC AdaEnt
+4. **SAC-AdaEnt**
 ```
 python run_sac_adaent.py --task TASK --logdir LOG_DIR 
                 --hidden-size HIDDEN_SIZE
