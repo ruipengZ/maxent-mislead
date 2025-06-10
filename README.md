@@ -45,7 +45,7 @@ To train and evaluate the RL algorithms, you run sh scripts `run_experiments`.
 sh run_experiments.sh
 ```
 
-For simplicity, we provide individual python files for each environment and algorithm, but you can also run the python script to train all algorithms on all environments.
+For convenience, we provide individual python files for each environment and algorithm, but you can also run the python script to train all algorithms on all environments.
 
 1. **PPO**
 ```
