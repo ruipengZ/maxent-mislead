@@ -1,6 +1,8 @@
 <div align="center">
 
-# [ICML'2025] [When Maximum Entropy Misleads Policy Optimization](https://www.arxiv.org/abs/2506.05615)
+  
+![ICML 2025](https://img.shields.io/badge/ICML-2025-blue) 
+# [When Maximum Entropy Misleads Policy Optimization](https://www.arxiv.org/abs/2506.05615)
 
 </div>
 
